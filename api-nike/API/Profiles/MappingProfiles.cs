@@ -30,5 +30,12 @@ public class MappingProfiles : Profile
             .ReverseMap();
         CreateMap<Sale, SaleDto>()
             .ReverseMap();
+
+        CreateMap<Sale, SaleProductDto>()
+            .ReverseMap();
+
+        CreateMap<Bill, BillManyProductsDto>()
+            .ForMember(dest => dest.ProductList, origen => origen.MapFrom(o => o.Sales))
+            .ReverseMap();
     }
 }

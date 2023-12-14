@@ -8,5 +8,10 @@ public class SaleDto
     public int IdBill { get; set; }
     public int IdProduct { get; set; }
     public int Quantity { get; set; }
-    
+}
+
+public class SaleProductDto
+{
+    public int IdProduct { get; set; }
+    public int Quantity { get; set; }
 }
