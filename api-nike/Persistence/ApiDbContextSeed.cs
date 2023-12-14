@@ -35,6 +35,64 @@ public class ApiDbContextSeed
 
         try
         {
+            if(!context.Categories.Any())
+            {
+                using (var reader = new StreamReader("../Persistence/Data/Csvs/category.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Category>();
+                        List<Category> entidad = new();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Category
+                            {
+                                Id = item.Id,
+                                Name = item.Name
+                            });
+                        }
+                        context.Categories.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
+
+            if(!context.Products.Any())
+            {
+                using (var reader = new StreamReader("../Persistence/Data/Csvs/product.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Product>();
+                        List<Product> entidad = new();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Product
+                            {
+                                Id = item.Id,
+                                Name = item.Name,
+                                Price = item.Price,
+                                Quantity = item.Quantity,
+                                IdCategory = item.IdCategory
+                            });
+                        }
+                        context.Products.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
+
+            
             if(!context.Users.Any())
             {
                 using (var reader = new StreamReader("../Persistence/Data/Csvs/user.csv"))
@@ -86,6 +144,38 @@ public class ApiDbContextSeed
                             });
                         }
                         context.UserRoles.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
+
+
+            if(!context.Users.Any())
+            {
+                using (var reader = new StreamReader("../Persistence/Data/Csvs/client.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Client>();
+                        List<Client> entidad = new();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Client
+                            {
+                                Id = item.Id,
+                                IdUser = item.IdUser,
+                                FirstName = item.FirstName,
+                                SecondName = item.SecondName,
+                                Surname = item.Surname,
+                                SecondSurname = item.SecondSurname
+                            });
+                        }
+                        context.Clients.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
                 }
