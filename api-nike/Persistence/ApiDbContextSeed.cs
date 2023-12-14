@@ -21,7 +21,7 @@ public class ApiDbContextSeed
                 var roles = new List<Rol>
                 {
                     new() { Name = "Administrator" },
-                    new() { Name = "Employee" },
+                    new() { Name = "Client" },
                     new() { Name = "WithoutRol" }
                 };
                 context.Roles.AddRange(roles);
@@ -81,8 +81,8 @@ public class ApiDbContextSeed
                         {
                             entidad.Add(new UserRol
                             {
-                                UserId= item.UserId,
-                                RolId = item.RolId
+                                IdUser= item.IdUser,
+                                IdRol = item.IdRol
                             });
                         }
                         context.UserRoles.AddRange(entidad);

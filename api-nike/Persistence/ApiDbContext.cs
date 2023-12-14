@@ -19,6 +19,17 @@ public class ApiDbContext : DbContext
     public DbSet<Rol> Roles { get; set; }
     public DbSet<UserRol> UserRoles { get; set; }
 
+    public virtual DbSet<Bill> Bills { get; set; }
+
+    public virtual DbSet<Category> Categories { get; set; }
+
+    public virtual DbSet<Client> Clients { get; set; }
+
+    public virtual DbSet<Product> Products { get; set; }
+
+    public virtual DbSet<Sale> Sales { get; set; }
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
