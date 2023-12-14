@@ -1,0 +1,46 @@
+Id,Name,Price,Quantity,IdCategory
+1,"Abrigo de Invierno",89.99,15,1
+2,"Abrigo de Lana",120.5,12,1
+3,"Chaqueta Impermeable",75,18,1
+4,"Chaqueta de Cuero",150,10,1
+5,"Parka con Capucha",99.95,14,1
+6,"Gabardina Clásica",110,17,1
+7,"Abrigo Acolchado",80.75,13,1
+8,"Chaqueta Vaquera",65.5,20,1
+9,"Abrigo de Plumas",105.25,16,1
+10,"Pantalones Vaqueros",49.99,12,2
+11,"Pantalones de Vestir",65,15,2
+12,"Pantalones Deportivos",35.5,18,2
+13,"Pantalones Cortos",25,20,2
+14,"Leggings de Yoga",30.95,14,2
+15,"Pantalones Cargo",55,17,2
+16,"Pantalones Chinos",40.75,13,2
+17,"Pantalones de Cuero",75.5,16,2
+18,"Pantalones Palazzo",60.25,10,2
+19,"Camiseta Básica",19.99,15,3
+20,"Camiseta Estampada",25.5,12,3
+21,"Camiseta de Manga Larga",22,18,3
+22,"Camiseta de Rayas",30,10,3
+23,"Camiseta Oversize",27.95,14,3
+24,"Camiseta Henley",20,17,3
+25,"Camiseta Polo",32.75,13,3
+26,"Camiseta sin Mangas",15.5,20,3
+27,"Camiseta Tie-Dye",28.25,16,3
+28,"Zapatillas Deportivas",79.99,12,4
+29,"Botas de Cuero",120.5,15,4
+30,"Zapatos de Tacón",65,18,4
+31,"Zapatillas Casual",49,20,4
+32,Mocasines,55.95,14,4
+33,"Sandalias Planas",30,17,4
+34,"Botines Chelsea",85.75,13,4
+35,"Zapatos Oxford",70.5,16,4
+36,Alpargatas,40.25,10,4
+37,"Bolso Tote",49.99,15,5
+38,"Mochila Casual",35.5,12,5
+39,"Bolso de Hombro",40,18,5
+40,"Cartera de Mano",25,10,5
+41,"Bolso Bandolera",30.95,14,5
+42,"Bolso de Playa",20,17,5
+43,"Mochila Deportiva",32.75,13,5
+44,"Bolso de Noche",15.5,20,5
+45,"Bolso Clutch",28.25,16,5
