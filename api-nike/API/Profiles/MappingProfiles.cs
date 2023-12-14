@@ -19,5 +19,16 @@ public class MappingProfiles : Profile
         CreateMap<User,UserAllDto>()
             .ForMember(dest=>dest.Roles, origen=> origen.MapFrom(origen=> origen.Roles))
             .ReverseMap();
+
+        CreateMap<Bill, BillDto>()
+            .ReverseMap();
+        CreateMap<Category, CategoryDto>()
+            .ReverseMap();
+        CreateMap<Client, ClientDto>()
+            .ReverseMap();
+        CreateMap<ProductDto, ProductDto>()
+            .ReverseMap();
+        CreateMap<Sale, SaleDto>()
+            .ReverseMap();
     }
 }
