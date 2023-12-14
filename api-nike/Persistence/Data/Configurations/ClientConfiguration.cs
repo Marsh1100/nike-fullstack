@@ -16,7 +16,7 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
 
             builder.ToTable("client");
 
-            builder.HasIndex(e => e.IdUser, "idUser");
+            builder.HasIndex(e => e.IdUser, "idUser").IsUnique();
 
             builder.Property(e => e.Id)
                 .HasColumnType("int(11)")
@@ -28,6 +28,8 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
             builder.Property(e => e.IdUser)
                 .HasColumnType("int(11)")
                 .HasColumnName("idUser");
+
+            
             builder.Property(e => e.SecondName)
                 .HasMaxLength(50)
                 .HasColumnName("secondName");
