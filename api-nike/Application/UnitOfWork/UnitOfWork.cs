@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Repository;
+using Domain.Entities;
 using Domain.Interfaces;
 using Persistence;
 
@@ -13,6 +14,13 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private readonly ApiDbContext _context;
     private IRolRepository _roles;
     private IUserRepository _users;
+
+    private IBill _bills;
+    private ICategory _categories;
+    private IClient _clients;
+    private IProduct _products;
+    private ISale _sales;
+
   
     public UnitOfWork(ApiDbContext context)
     {
@@ -41,6 +49,61 @@ public class UnitOfWork : IUnitOfWork, IDisposable
             return _users;
         }
     }
+    public IBill Bills
+    {
+        get
+        {
+            if (_bills == null)
+            {
+                _bills = new BillRepository(_context);
+            }
+            return _bills;
+        }
+    }
+    public ICategory Categories
+    {
+        get
+        {
+            if (_categories == null)
+            {
+                _categories = new CategoryRepository(_context);
+            }
+            return _categories;
+        }
+    }
+    public IClient Clients
+    {
+        get
+        {
+            if (_clients == null)
+            {
+                _clients = new ClientRepository(_context);
+            }
+            return _clients;
+        }
+    }
+    public IProduct Products
+    {
+        get
+        {
+            if (_products == null)
+            {
+                _products = new ProductRepository(_context);
+            }
+            return _products;
+        }
+    }
+    public ISale Sales
+    {
+        get
+        {
+            if (_sales == null)
+            {
+                _sales = new SaleRepository(_context);
+            }
+            return _sales;
+        }
+    }    
     
     public async Task<int> SaveAsync()
     {

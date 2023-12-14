@@ -9,5 +9,11 @@ public interface IUnitOfWork
 {
     IRolRepository Roles { get; }
     IUserRepository Users { get; }
+
+    IBill Bills { get; }
+    ICategory Categories { get; }
+    IClient Clients { get; }
+    IProduct Products { get; }
+    ISale Sales { get; }
     Task<int> SaveAsync();
 }
