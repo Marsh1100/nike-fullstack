@@ -12,5 +12,20 @@ public class CategoryRepository : GenericRepository<Category>, ICategory
         _context = context;
     }
 
+    public override async Task<(int totalRegistros, IEnumerable<Category> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var query = _context.Categories as IQueryable<Category>;
+        if(!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p=>p.Name.ToLower().Contains(search));
+        }
+        var totalRegistros = await query.CountAsync();
+        var registros = await query 
+                            .Skip((pageIndex-1)*pageSize)
+                            .Take(pageSize)
+                            .ToListAsync();
+        return (totalRegistros, registros);
+    }
+
    
 }
