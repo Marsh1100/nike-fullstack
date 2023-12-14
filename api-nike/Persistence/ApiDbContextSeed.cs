@@ -83,7 +83,8 @@ public class ApiDbContextSeed
                                 Name = item.Name,
                                 Price = item.Price,
                                 Quantity = item.Quantity,
-                                IdCategory = item.IdCategory
+                                IdCategory = item.IdCategory,
+                                Imagen = item.Imagen
                             });
                         }
                         context.Products.AddRange(entidad);

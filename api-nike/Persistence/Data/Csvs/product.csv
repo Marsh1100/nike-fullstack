@@ -1,46 +1,46 @@
-Id,Name,Price,Quantity,IdCategory
-1,"Abrigo de Invierno",89.99,15,1
-2,"Abrigo de Lana",120.5,12,1
-3,"Chaqueta Impermeable",75,18,1
-4,"Chaqueta de Cuero",150,10,1
-5,"Parka con Capucha",99.95,14,1
-6,"Gabardina Clásica",110,17,1
-7,"Abrigo Acolchado",80.75,13,1
-8,"Chaqueta Vaquera",65.5,20,1
-9,"Abrigo de Plumas",105.25,16,1
-10,"Pantalones Vaqueros",49.99,12,2
-11,"Pantalones de Vestir",65,15,2
-12,"Pantalones Deportivos",35.5,18,2
-13,"Pantalones Cortos",25,20,2
-14,"Leggings de Yoga",30.95,14,2
-15,"Pantalones Cargo",55,17,2
-16,"Pantalones Chinos",40.75,13,2
-17,"Pantalones de Cuero",75.5,16,2
-18,"Pantalones Palazzo",60.25,10,2
-19,"Camiseta Básica",19.99,15,3
-20,"Camiseta Estampada",25.5,12,3
-21,"Camiseta de Manga Larga",22,18,3
-22,"Camiseta de Rayas",30,10,3
-23,"Camiseta Oversize",27.95,14,3
-24,"Camiseta Henley",20,17,3
-25,"Camiseta Polo",32.75,13,3
-26,"Camiseta sin Mangas",15.5,20,3
-27,"Camiseta Tie-Dye",28.25,16,3
-28,"Zapatillas Deportivas",79.99,12,4
-29,"Botas de Cuero",120.5,15,4
-30,"Zapatos de Tacón",65,18,4
-31,"Zapatillas Casual",49,20,4
-32,Mocasines,55.95,14,4
-33,"Sandalias Planas",30,17,4
-34,"Botines Chelsea",85.75,13,4
-35,"Zapatos Oxford",70.5,16,4
-36,Alpargatas,40.25,10,4
-37,"Bolso Tote",49.99,15,5
-38,"Mochila Casual",35.5,12,5
-39,"Bolso de Hombro",40,18,5
-40,"Cartera de Mano",25,10,5
-41,"Bolso Bandolera",30.95,14,5
-42,"Bolso de Playa",20,17,5
-43,"Mochila Deportiva",32.75,13,5
-44,"Bolso de Noche",15.5,20,5
-45,"Bolso Clutch",28.25,16,5
+Id,Name,Price,Quantity,IdCategory,Imagen
+1,"Abrigo de Invierno",89.99,15,1,"https://cdnx.jumpseller.com/urbenmood/image/6806270/PS3434_Chaqueta_Invierno_Gruesa_Hombres_Casual_Capucha_Talla_S__L_.1.jpg?1699984549"
+2,"Abrigo de Lana",120.5,12,1,"https://ae01.alicdn.com/kf/S4b9633be24b04b8eba753bc974af5cf31/Abrigo-de-lana-de-talla-grande-para-mujer-chaqueta-holgada-de-Color-s-lido-con-solapa.jpg"
+3,"Chaqueta Impermeable",75,18,1,"https://cdnx.jumpseller.com/tiendas-epp/image/9339657/resize/480/480?1655490456"
+4,"Chaqueta de Cuero",150,10,1,"https://cdn-icons-png.flaticon.com/128/5504/5504317.png"
+5,"Parka con Capucha",99.95,14,1,"https://cdn-icons-png.flaticon.com/128/5504/5504317.png"
+6,"Gabardina Clásica",110,17,1,"https://cdn-icons-png.flaticon.com/128/5504/5504317.png"
+7,"Abrigo Acolchado",80.75,13,1,"https://cdn-icons-png.flaticon.com/128/5504/5504317.png"
+8,"Chaqueta Vaquera",65.5,20,1,"https://cdn-icons-png.flaticon.com/128/5504/5504317.png"
+9,"Abrigo de Plumas",105.25,16,1,"https://cdn-icons-png.flaticon.com/128/5504/5504317.png"
+10,"Pantalones Vaqueros",49.99,12,2,"https://www.zonatactica.es/6528/pantalon-vaquero-pentagon-rogue.jpg"
+11,"Pantalones de Vestir",65,15,2,"https://cdn-images.farfetch-contents.com/19/97/85/95/19978595_45254729_1000.jpg"
+12,"Pantalones Deportivos",35.5,18,2,"https://racketball.vteximg.com.br/arquivos/ids/195158-640-800/25848-PANTALON-DEPORTIVO-SEMI-AJUSTADO-AZUL-OSCURO-HOMBRE-PANTALONES-Y-LICRAS-RACKETBALL-7701650861517-1.jpg?v=637629344489200000"
+13,"Pantalones Cortos",25,20,2,"https://cdn-icons-png.flaticon.com/128/2774/2774378.png"
+14,"Leggings de Yoga",30.95,14,2,"https://cdn-icons-png.flaticon.com/128/2774/2774378.png"
+15,"Pantalones Cargo",55,17,2,"https://cdn-icons-png.flaticon.com/128/2774/2774378.png"
+16,"Pantalones Chinos",40.75,13,2,"https://cdn-icons-png.flaticon.com/128/2774/2774378.png"
+17,"Pantalones de Cuero",75.5,16,2,"https://cdn-icons-png.flaticon.com/128/2774/2774378.png"
+18,"Pantalones Palazzo",60.25,10,2,"https://cdn-icons-png.flaticon.com/128/2774/2774378.png"
+19,"Camiseta Básica",19.99,15,3,"https://realvintagefootball.com/cdn/shop/products/0158-NikeTrainingShirt_Back.jpg?v=1604051890&width=1946"
+20,"Camiseta Estampada",25.5,12,3,"https://jeymova.com/uploads/camiseta-estampada/lobo-azul-neon.jpg"
+21,"Camiseta de Manga Larga",22,18,3,"https://i.linio.com/p/98a2a1b79417238c9e9b5753f9dad5f8-product.jpg"
+22,"Camiseta de Rayas",30,10,3,"https://cdn-icons-png.flaticon.com/128/3345/3345369.png"
+23,"Camiseta Oversize",27.95,14,3,"https://cdn-icons-png.flaticon.com/128/3345/3345369.png"
+24,"Camiseta Henley",20,17,3,"https://cdn-icons-png.flaticon.com/128/3345/3345369.png"
+25,"Camiseta Polo",32.75,13,3,"https://cdn-icons-png.flaticon.com/128/3345/3345369.png"
+26,"Camiseta sin Mangas",15.5,20,3,"https://cdn-icons-png.flaticon.com/128/3345/3345369.png"
+27,"Camiseta Tie-Dye",28.25,16,3,"https://cdn-icons-png.flaticon.com/128/3345/3345369.png"
+28,"Zapatillas Deportivas",79.99,12,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+29,"Botas de Cuero",120.5,15,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+30,"Zapatos de Tacón",65,18,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+31,"Zapatillas Casual",49,20,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+32,Mocasines,55.95,14,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+33,"Sandalias Planas",30,17,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+34,"Botines Chelsea",85.75,13,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+35,"Zapatos Oxford",70.5,16,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+36,Alpargatas,40.25,10,4,"https://cdn-icons-png.flaticon.com/128/919/919275.png"
+37,"Bolso Tote",49.99,15,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+38,"Mochila Casual",35.5,12,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+39,"Bolso de Hombro",40,18,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+40,"Cartera de Mano",25,10,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+41,"Bolso Bandolera",30.95,14,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+42,"Bolso de Playa",20,17,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+43,"Mochila Deportiva",32.75,13,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+44,"Bolso de Noche",15.5,20,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"
+45,"Bolso Clutch",28.25,16,5,"https://cdn-icons-png.flaticon.com/128/4042/4042167.png"

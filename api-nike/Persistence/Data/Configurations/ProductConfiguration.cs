@@ -28,6 +28,11 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
                 .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("name");
+            builder.Property(e => e.Quantity).HasColumnName("quantity");
+
+            builder.Property(e => e.Price).HasColumnName("price");
+            builder.Property(e => e.Imagen).HasColumnName("imagen");
+
 
             builder.HasOne(d => d.Categories).WithMany(p => p.Products)
                 .HasForeignKey(d => d.IdCategory)
