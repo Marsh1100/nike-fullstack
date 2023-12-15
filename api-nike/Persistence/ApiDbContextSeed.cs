@@ -151,7 +151,7 @@ public class ApiDbContextSeed
             }
 
 
-            if(!context.Users.Any())
+            if(!context.Clients.Any())
             {
                 using (var reader = new StreamReader("../Persistence/Data/Csvs/client.csv"))
                 {

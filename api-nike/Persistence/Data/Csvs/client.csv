@@ -1,5 +1,5 @@
-Id,IdUser,IirstName,SecondName,Surname,SecondSurname
-1,1,Sara,NULL,Gómez,Hernández
-2,2,Marcos,NULL,Martínez,Santos
-3,3,Hugo,David,Castaño,Rojas
-4,4,Tomas,Fabian,Ramírez,Jiménez
+Id,IdUser,FirstName,SecondName,Surname,SecondSurname
+1,1,"Sara","María","Gómez","Hernández"
+2,2,"Marcos","Felipe","Martínez","Santos"
+3,3,"Hugo","David","Castaño","Rojas"
+4,4,"Tomas","Fabian","Ramírez","Jiménez"
