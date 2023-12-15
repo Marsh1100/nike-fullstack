@@ -35,6 +35,18 @@ public class ProductController : ApiBaseController
         var results = await _unitOfWork.Products.GetAllAsync();
         return _mapper.Map<List<ProductDto>>(results);
     }
+
+    [HttpGet("orderByCategory")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+    public async Task<ActionResult> GetProductsByCategory()
+    {
+        var results = await _unitOfWork.Products.GetProductsByCategory();
+        return Ok(results);
+    }
+
     [HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]

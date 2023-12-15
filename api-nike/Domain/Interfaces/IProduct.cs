@@ -5,5 +5,5 @@ namespace Domain.Interfaces;
 public interface IProduct : IGenericRepository<Product> 
 { 
    
-
+    Task<object> GetProductsByCategory();
 }

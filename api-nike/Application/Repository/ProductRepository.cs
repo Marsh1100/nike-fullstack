@@ -26,5 +26,21 @@ public class ProductRepository : GenericRepository<Product>, IProduct
                             .ToListAsync();
         return (totalRegistros, registros);
     }
-   
+
+    public async Task<object> GetProductsByCategory()
+    {
+        return await _context.Products.Include(a=>a.Categories).GroupBy(d=> d.IdCategory)
+                     .Select(s=> new
+                     {
+                        category = s.Key,
+                        products = s.Select(p=> new 
+                        {
+                            p.Id,
+                            p.Name,
+                            p.Price,
+                            p.Imagen
+                        })
+                     })
+                     .ToListAsync();
+    }
 }
