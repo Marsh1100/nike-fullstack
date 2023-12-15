@@ -19,4 +19,6 @@ public interface IGenericRepository<T> where T : BaseEntity
     void Update(T entity);
     //Paginación
     Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize, string Search);
+    Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync2(int pageIndex, int pageSize, int Search);
+
 }

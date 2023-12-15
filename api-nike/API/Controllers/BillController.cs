@@ -41,7 +41,11 @@ public class BillController : ApiBaseController
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<Pager<BillDto>>> GetPagination([FromQuery] Params p)
     {
-        var results = await _unitOfWork.Bills.GetAllAsync(p.PageIndex, p.PageSize, p.Search);
+        if(!int.TryParse(p.Search, out int search))
+        {
+            search = 0;
+        }
+        var results = await _unitOfWork.Bills.GetAllAsync2(p.PageIndex, p.PageSize, search);
         var resultsDto = _mapper.Map<List<BillDto>>(results.registros);
         return  new Pager<BillDto>(resultsDto,results.totalRegistros, p.PageIndex, p.PageSize, p.Search);
     }
@@ -50,54 +54,14 @@ public class BillController : ApiBaseController
     [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<BillDto>> Post([FromBody] BillDto dto)
+    public async Task<ActionResult> Post([FromBody] BillManyProductsDto dto)
     {
-        var result = _mapper.Map<Bill>(dto);
-        this._unitOfWork.Bills.Add(result);
-        await _unitOfWork.SaveAsync();
+        var bill = _mapper.Map<Bill>(dto);
+        var listProducts = _mapper.Map<List<Sale>>(dto.ProductList);
+        var result = await _unitOfWork.Bills.ConfirmSale(bill,listProducts);
 
-
-        if(result == null)
-        {
-            return BadRequest();
-        }
-        return CreatedAtAction(nameof(Post), new{id=result.Id}, result);
-    }
-
-
-    [HttpPut()]
-    [MapToApiVersion("1.0")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-    public async Task<ActionResult<BillDto>> put(BillDto dto)
-    {
-        if(dto == null){ return NotFound(); }
-        var result = this._mapper.Map<Bill>(dto);
-        this._unitOfWork.Bills.Update(result);
-        Console.WriteLine(await this._unitOfWork.SaveAsync());
         return Ok(result);
     }
 
-
-    [HttpDelete("{id}")]
-    [MapToApiVersion("1.0")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-
-    public async Task<IActionResult> Delete(int id)
-    {
-        var result = await _unitOfWork.Bills.GetByIdAsync(id);
-        if(result == null)
-        {
-            return NotFound();
-        }
-        this._unitOfWork.Bills.Remove(result);
-        await this._unitOfWork.SaveAsync();
-        return NoContent();
-    }
-
-   
     
 }
